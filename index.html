@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSS | غیرقابل نفوذ ⋅ غیرقابل شکست ⋅ غیرقابل توقف</title>
+    <meta name="description" content="قفل فرمان، قفل پدال و قفل پدال اتومات GSS – امنیت واقعی با فولاد سخت‌کاری‌شده و سیلندر سولکسی ضداسید">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* پایه */
+        :root{
+            --primary:#FFC107;
+            --primary-glow:#FFEB3B;
+            --bg-dark:#000;
+            --card-bg: rgba(17,17,17,0.8);
+            --text:#ffffff;
+            --gap: clamp(12px, 2.2vw, 32px);
+        }
+        html,body{height:100%;margin:0;padding:0;box-sizing:border-box;overflow-x:hidden;background:#000;color:var(--text);font-family:'Vazirmatn',sans-serif;line-height:1.6}
+        *{box-sizing:inherit}
+
+        /* هدر */
+        header{
+            position:fixed;top:0;left:0;width:100%;z-index:9999;
+            display:flex;align-items:center;justify-content:space-between;
+            padding:12px 5%; background:linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.8));
+            border-bottom:2px solid rgba(255,193,7,0.08);
+            transition:background .25s, padding .2s;
+            backdrop-filter: blur(6px);
+        }
+        .logo-img{height:64px;object-fit:contain;filter:drop-shadow(0 0 18px var(--primary-glow))}
+        .lang-switch{background:var(--primary);color:#000;padding:10px 18px;border-radius:999px;font-weight:800;cursor:pointer;box-shadow:0 6px 30px rgba(255,193,7,0.15);border:none}
+
+        /* Hero */
+        .hero{
+            min-height:calc(100vh - 92px); /* header space */
+            display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:120px 6% 60px;
+            background:
+                linear-gradient(180deg, rgba(204,164,7,0.22) 0%, rgba(0,0,0,0.92) 60%),
+                url("HERO.JPEG") center/cover no-repeat;
+            background-attachment: scroll;
+        }
+        /* On larger screens allow parallax effect but avoid on mobile */
+        @media(min-width:992px){
+            .hero{ background-attachment: fixed; }
+        }
+        .hero .wrap{max-width:1100px;padding:20px}
+        .hero h1{
+            font-family:'Orbitron',sans-serif;
+            color:var(--primary);
+            font-size: clamp(28px, 6vw, 82px);
+            margin:0 0 18px;
+            letter-spacing:3px;
+            text-shadow:0 0 30px var(--primary-glow), 0 0 80px rgba(255,193,7,0.12);
+            line-height:1;
+        }
+        .hero p{font-size: clamp(14px, 2.6vw, 28px);margin:10px auto 22px;max-width:1000px;opacity:0.95}
+
+        .btn{
+            background:var(--primary);color:#000;padding:14px 28px;border-radius:999px;border:none;font-weight:900;font-size:clamp(14px,2.4vw,26px);cursor:pointer;
+            box-shadow:0 8px 40px rgba(255,193,7,0.15);transition:transform .28s ease, box-shadow .28s ease;
+        }
+        .btn:hover{transform:translateY(-6px);box-shadow:0 20px 80px rgba(255,193,7,0.22)}
+
+        /* sections */
+        .section{padding:90px 6%;position:relative}
+        h2{font-family:'Orbitron',sans-serif;color:var(--primary);font-size:clamp(26px,4.6vw,62px);text-align:center;margin:0 0 40px;text-shadow:0 0 30px rgba(255,193,7,0.08)}
+
+        /* tests grid */
+        .tests-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(14px,2.4vw,40px)}
+        .test-card{background:var(--card-bg);padding:28px;border-radius:20px;text-align:center;border:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(6px);transition:transform .45s cubic-bezier(.16,.84,.44,1),box-shadow .45s}
+        .test-card:hover{transform:translateY(-14px);box-shadow:0 30px 80px rgba(255,193,7,0.06)}
+        .test-card i{font-size:clamp(36px,7vw,90px);color:var(--primary);margin-bottom:18px;text-shadow:0 0 24px rgba(255,193,7,0.12)}
+        .test-card h3{font-size:clamp(16px,2.6vw,24px);margin-bottom:8px}
+        .test-card p{font-size:clamp(13px,2.1vw,18px);opacity:0.95;margin:0}
+
+        /* soleksi section */
+        .solexi{padding:80px 6%;text-align:center;background:linear-gradient(180deg,#000,#0a0a0a)}
+        .solexi img{width:320px;max-width:60%;height:auto;border-radius:16px;border:5px solid var(--primary);box-shadow:0 30px 80px rgba(255,193,7,0.12);transition:transform .4s}
+        .solexi img:hover{transform:scale(1.04)}
+        .solexi p{font-size:clamp(14px,2.2vw,28px);max-width:980px;margin:30px auto 0;line-height:1.9;opacity:0.95}
+
+        /* products */
+        .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(18px,2.4vw,48px);margin-top:30px}
+        .product-card{background:#0f0f0f;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);transition:transform .45s,box-shadow .45s;display:flex;flex-direction:column}
+        .product-card img{width:100%;height:260px;object-fit:cover;display:block}
+        .product-info{padding:22px;text-align:center}
+        .product-info h3{font-size:clamp(16px,2.2vw,28px);margin-bottom:8px}
+        .product-info p{font-size:clamp(13px,1.9vw,18px);opacity:0.95}
+
+        /* luxury cars */
+        .luxury-cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:30px}
+        .luxury-cars img{width:100%;height:160px;object-fit:cover;border-radius:12px;box-shadow:0 20px 50px rgba(255,193,7,0.05);transition:transform .28s}
+        .luxury-cars img:hover{transform:scale(1.04)}
+
+        /* story */
+        .story{padding:80px 6%;background:#0a0a0a;text-align:center}
+        .story p{font-size:clamp(14px,2.2vw,28px);max-width:1100px;margin:0 auto;line-height:2;opacity:0.95}
+
+        /* cta */
+        .cta-final{padding:120px 6%;text-align:center;background:linear-gradient(to top,#000,#0a0a0a)}
+        .cta-final h2{font-size:clamp(22px,3.8vw,88px);margin-bottom:24px}
+        .cta-final .btn{padding:18px 36px;font-size:clamp(14px,2.4vw,36px)}
+
+        /* whatsapp float */
+        .whatsapp-float{position:fixed;left:18px;bottom:18px;background:#25D366;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;box-shadow:0 10px 40px rgba(37,211,102,0.12);z-index:9999;transition:transform .2s}
+        .whatsapp-float:hover{transform:scale(1.08)}
+
+        /* footer */
+        footer{padding:40px 6%;text-align:center;background:#000;color:#bbb;font-size:14px}
+
+        /* small devices tweaks */
+        @media (max-width:768px){
+            header{padding:10px 4%}
+            .logo-img{height:52px}
+            .hero{padding-top:100px;padding-bottom:40px;background-attachment:scroll}
+            .tests-grid{gap:14px}
+            .product-card img{height:200px}
+            .luxury-cars img{height:120px}
+            .whatsapp-float{left:12px;bottom:12px;width:56px;height:56px;font-size:24px}
+            /* Reduce heavy effects on small screens */
+            .test-card, .product-card{backdrop-filter:none;box-shadow:none}
+        }
+
+        /* Prevent possible horizontal overflow from long words or LTR content */
+        .wrap, .product-info, .test-card, .story p, .hero p {word-wrap:break-word;hyphens:auto;overflow-wrap:break-word}
+    </style>
+</head>
+<body lang="fa" dir="rtl">
+
+    <header>
+        <img src="LOGO.JPG" alt="GSS" class="logo-img">
+        <button class="lang-switch" id="langSwitch">ENGLISH</button>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="hero">
+            <div class="wrap">
+                <h1 data-en="UNBREAKABLE. UNSTOPPABLE. GSS.">غیرقابل نفوذ ⋅ غیرقابل شکست ⋅ غیرقابل توقف</h1>
+                <p data-en="The lock that professional thieves truly fear">تنها قفلی که سارق‌های حرفه‌ای واقعاً ازش می‌ترسن</p>
+                <div style="margin-top:18px">
+                    <button class="btn" id="seeProof" data-en="SEE THE PROOF">خودت ببین</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="tests" class="section" aria-label="tests">
+            <h2 data-en="THIEVES TRIED. ALL FAILED.">سارق‌ها امتحان نمکنند. چون روشن بین هستند.</h2>
+            <div class="tests-grid" role="list">
+                <div class="test-card" role="listitem"><i class="fas fa-cut" aria-hidden="true"></i><h3>مقاوم در برابر برش</h3><p>امنیت</p></div>
+                <div class="test-card" role="listitem"><i class="fas fa-flask" aria-hidden="true"></i><h3>اسید غلیظ هیدروکلریک</h3><p>فقط دود کرد و رفت</p></div>
+                <div class="test-card" role="listitem"><i class="fas fa-drill" aria-hidden="true"></i><h3>مته الماس صنعتی</h3><p>شاید خراب بشه، باز نمیشه</p></div>
+                <div class="test-card" role="listitem"><i class="fas fa-hammer" aria-hidden="true"></i><h3>مقاوم در برابر ضربه</h3><p>زبانه های سخت کاری شده</p></div>
+                <div class="test-card" role="listitem"><i class="fas fa-bolt" aria-hidden="true"></i><h3>شوکر</h3><p>غیر قابل اتصال</p></div>
+                <div class="test-card" role="listitem"><i class="fas fa-fire" aria-hidden="true"></i><h3>مقاوم در بابر حرارت</h3><p>کاملا فولادی</p></div>
+            </div>
+        </section>
+
+        <section class="solexi" aria-label="solexi">
+            <h2>سیلندر سولکسی ضد اسید</h2>
+            <img src="KEY.jpg" alt="کلید زرد سولکسی">
+            <p>قلب تپنده قفلهای فولادی GSS .<br>ضد اسید ⋅ ضد دریل ⋅ ضد شاه‌کلید ⋅ تنوع کد دهی بالا ⋅ غیرقابل کپی</p>
+        </section>
+
+        <section class="section" style="background:#0a0a0a;">
+            <h2 data-en="GSS UNBREAKABLE SERIES">مجموعه غیرقابل شکست GSS</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="FARMAN1.jpg" alt="قفل فرمان GSS">
+                    <div class="product-info">
+                        <h3 data-en="Steering Wheel Lock">قفل فرمان GSS</h3>
+                        <p>فولاد سخت‌کاری‌شده ⋅ غیرقابل برش  ... ⋅ نصب در ۸ ثانیه</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="PEDAL.jpg" alt="قفل پدال GSS">
+                    <div class="product-info">
+                        <h3 data-en="Pedal Lock">قفل پدال GSS</h3>
+                        <p>قفل همزمان گاز و ترمز ⋅ حتی اگر فرمان بریده شود، ماشین تکون نمی‌خورد</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="OTOMAT.jpg" alt="قفل پدال اتومات GSS">
+                    <div class="product-info">
+                        <h3 data-en="Automatic Pedal Lock">قفل پدال اتومات GSS (جدید)</h3>
+                        <p>تمامی خودروهای دنده اتومات هم ایمن شد.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 data-en="TRUSTED BY LUXURY CAR OWNERS">ماشین‌های لوکس فقط GSS می‌خرن</h2>
+            <div class="luxury-cars">
+                <img src="LAMB.jpg" alt="مرسدس با GSS">
+                <img src="BMW.jpg" alt="بی ام و با GSS">
+                <img src="PORSH.jpg" alt="پورشه با GSS">
+                <img src="BENZ.jpg" alt="لامبورگینی با GSS">
+            </div>
+        </section>
+
+        <section class="story">
+            <h2 data-en="THE GSS STORY">ارتباط با GSS</h2>
+            <p>ایران - تهران - بازار بزرگ<br>
+            چراغ برق - روبروی مترو ملت - پلاک 101<br><br>
+            فروشگاه GSS<br>
+            'گروه تولیدی و صنعتی GSS همواره برای بهبود کیفیت '<br>
+            و نوآوری همچنان در پی فعالیت هستن.<br><br>
+            GSS یعنی امنیت واقعی. نه شعار.
+            </p>
+        </section>
+
+        <section class="cta-final">
+            <h2 data-en="YOUR CAR DESERVES REAL PROTECTION">ماشینت لایق امنیت واقعی است</h2>
+            <button class="btn" onclick="window.location.href='https://wa.me/00989123793037'">همین الان پیام بده تو واتس‌اپ</button>
+        </section>
+    </main>
+
+    <a href="https://wa.me/00989123793037" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <footer>
+        © 2025 GSS. All Rights Reserved.
+    </footer>
+
+    <script>
+        // Language switch: swap text with data-en attribute (works both ways)
+        (function(){
+            const switchBtn = document.getElementById('langSwitch');
+            switchBtn.addEventListener('click', function(){
+                // Determine current language by html lang
+                const html = document.documentElement;
+                const isFa = html.lang === 'fa' || html.lang === 'fa-IR';
+                // Swap lang & dir
+                html.lang = isFa ? 'en' : 'fa';
+                html.dir = isFa ? 'ltr' : 'rtl';
+                // swap texts
+                document.querySelectorAll('[data-en]').forEach(el=>{
+                    let en = el.getAttribute('data-en') || '';
+                    let current = el.innerText || '';
+                    // set innerText to en and store previous in data-en (swap)
+                    el.innerText = isFa ? en : current;
+                    el.setAttribute('data-en', isFa ? current : en);
+                });
+                switchBtn.innerText = isFa ? 'فارسی' : 'ENGLISH';
+            });
+
+            // smooth scroll for "see proof"
+            document.getElementById('seeProof').addEventListener('click', function(){
+                const target = document.getElementById('tests');
+                if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+            });
+
+            // Accessibility: reduce motion if user prefers
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            if(reduceMotion && reduceMotion.matches){
+                document.documentElement.style.setProperty('--reduce-motion', 'true');
+                // disable some heavy transitions
+                document.querySelectorAll('*').forEach(el=>{
+                    el.style.transitionDuration = '0s';
+                    el.style.animationDuration = '0s';
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
