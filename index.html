@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* پایه */
         :root{
             --primary:#FFC107;
             --primary-glow:#FFEB3B;
@@ -24,24 +23,25 @@
         header{
             position:fixed;top:0;left:0;width:100%;z-index:9999;
             display:flex;align-items:center;justify-content:space-between;
-            padding:12px 5%; background:linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.8));
+            padding:10px 5%; background:linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.8));
             border-bottom:2px solid rgba(255,193,7,0.08);
             transition:background .25s, padding .2s;
             backdrop-filter: blur(6px);
         }
-        .logo-img{height:64px;object-fit:contain;filter:drop-shadow(0 0 18px var(--primary-glow))}
+        .logo-img{height:52px;object-fit:contain;filter:drop-shadow(0 0 18px var(--primary-glow))}
         .lang-switch{background:var(--primary);color:#000;padding:10px 18px;border-radius:999px;font-weight:800;cursor:pointer;box-shadow:0 6px 30px rgba(255,193,7,0.15);border:none}
 
         /* Hero */
         .hero{
-            min-height:calc(100vh - 92px); /* header space */
-            display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:120px 6% 60px;
+            min-height:calc(100vh - 72px);
+            display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:80px 6% 40px;
             background:
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 0%, transparent 40%),
+                radial-gradient(circle at 70% 70%, rgba(255,255,255,0.05) 0%, transparent 50%),
                 linear-gradient(180deg, rgba(204,164,7,0.22) 0%, rgba(0,0,0,0.92) 60%),
                 url("HERO.JPEG") center/cover no-repeat;
-            background-attachment: scroll;
+            background-blend-mode: overlay, overlay, normal, normal;
         }
-        /* On larger screens allow parallax effect but avoid on mobile */
         @media(min-width:992px){
             .hero{ background-attachment: fixed; }
         }
@@ -50,12 +50,22 @@
             font-family:'Orbitron',sans-serif;
             color:var(--primary);
             font-size: clamp(28px, 6vw, 82px);
-            margin:0 0 18px;
+            margin:0 0 12px;
             letter-spacing:3px;
             text-shadow:0 0 30px var(--primary-glow), 0 0 80px rgba(255,193,7,0.12);
             line-height:1;
+            display:inline-block;
+            padding:12px 28px;
+            border:2px solid rgba(255,193,7,0.5);
+            border-radius:16px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+            box-shadow:
+                0 0 12px rgba(255,193,7,0.6),
+                0 0 40px rgba(255,193,7,0.2),
+                0 0 80px rgba(255,193,7,0.1),
+                inset 0 0 20px rgba(255,255,255,0.08);
         }
-        .hero p{font-size: clamp(14px, 2.6vw, 28px);margin:10px auto 22px;max-width:1000px;opacity:0.95}
+        .hero p{font-size: clamp(14px, 2.6vw, 28px);margin:6px auto 14px;max-width:1000px;opacity:0.95}
 
         .btn{
             background:var(--primary);color:#000;padding:14px 28px;border-radius:999px;border:none;font-weight:900;font-size:clamp(14px,2.4vw,26px);cursor:pointer;
@@ -64,43 +74,43 @@
         .btn:hover{transform:translateY(-6px);box-shadow:0 20px 80px rgba(255,193,7,0.22)}
 
         /* sections */
-        .section{padding:90px 6%;position:relative}
-        h2{font-family:'Orbitron',sans-serif;color:var(--primary);font-size:clamp(26px,4.6vw,62px);text-align:center;margin:0 0 40px;text-shadow:0 0 30px rgba(255,193,7,0.08)}
+        .section{padding:60px 6%;position:relative}
+        h2{font-family:'Orbitron',sans-serif;color:var(--primary);font-size:clamp(26px,4.6vw,62px);text-align:center;margin:0 0 30px;text-shadow:0 0 30px rgba(255,193,7,0.08)}
 
         /* tests grid */
         .tests-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(14px,2.4vw,40px)}
-        .test-card{background:var(--card-bg);padding:28px;border-radius:20px;text-align:center;border:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(6px);transition:transform .45s cubic-bezier(.16,.84,.44,1),box-shadow .45s}
+        .test-card{background:var(--card-bg);padding:22px;border-radius:20px;text-align:center;border:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(6px);transition:transform .45s cubic-bezier(.16,.84,.44,1),box-shadow .45s}
         .test-card:hover{transform:translateY(-14px);box-shadow:0 30px 80px rgba(255,193,7,0.06)}
-        .test-card i{font-size:clamp(36px,7vw,90px);color:var(--primary);margin-bottom:18px;text-shadow:0 0 24px rgba(255,193,7,0.12)}
-        .test-card h3{font-size:clamp(16px,2.6vw,24px);margin-bottom:8px}
+        .test-card i{font-size:clamp(36px,7vw,90px);color:var(--primary);margin-bottom:14px;text-shadow:0 0 24px rgba(255,193,7,0.12)}
+        .test-card h3{font-size:clamp(16px,2.6vw,24px);margin-bottom:6px}
         .test-card p{font-size:clamp(13px,2.1vw,18px);opacity:0.95;margin:0}
 
         /* soleksi section */
-        .solexi{padding:80px 6%;text-align:center;background:linear-gradient(180deg,#000,#0a0a0a)}
+        .solexi{padding:60px 6%;text-align:center;background:linear-gradient(180deg,#000,#0a0a0a)}
         .solexi img{width:320px;max-width:60%;height:auto;border-radius:16px;border:5px solid var(--primary);box-shadow:0 30px 80px rgba(255,193,7,0.12);transition:transform .4s}
         .solexi img:hover{transform:scale(1.04)}
-        .solexi p{font-size:clamp(14px,2.2vw,28px);max-width:980px;margin:30px auto 0;line-height:1.9;opacity:0.95}
+        .solexi p{font-size:clamp(14px,2.2vw,28px);max-width:980px;margin:20px auto 0;line-height:1.9;opacity:0.95}
 
         /* products */
-        .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(18px,2.4vw,48px);margin-top:30px}
+        .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(18px,2.4vw,48px);margin-top:20px}
         .product-card{background:#0f0f0f;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);transition:transform .45s,box-shadow .45s;display:flex;flex-direction:column}
         .product-card img{width:100%;height:260px;object-fit:cover;display:block}
-        .product-info{padding:22px;text-align:center}
-        .product-info h3{font-size:clamp(16px,2.2vw,28px);margin-bottom:8px}
+        .product-info{padding:18px;text-align:center}
+        .product-info h3{font-size:clamp(16px,2.2vw,28px);margin-bottom:6px}
         .product-info p{font-size:clamp(13px,1.9vw,18px);opacity:0.95}
 
         /* luxury cars */
-        .luxury-cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:30px}
+        .luxury-cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:20px}
         .luxury-cars img{width:100%;height:160px;object-fit:cover;border-radius:12px;box-shadow:0 20px 50px rgba(255,193,7,0.05);transition:transform .28s}
         .luxury-cars img:hover{transform:scale(1.04)}
 
         /* story */
-        .story{padding:80px 6%;background:#0a0a0a;text-align:center}
-        .story p{font-size:clamp(14px,2.2vw,28px);max-width:1100px;margin:0 auto;line-height:2;opacity:0.95}
+        .story{padding:60px 6%;background:#0a0a0a;text-align:center}
+        .story p{font-size:clamp(14px,2.2vw,28px);max-width:1100px;margin:0 auto;line-height:1.9;opacity:0.95}
 
         /* cta */
-        .cta-final{padding:120px 6%;text-align:center;background:linear-gradient(to top,#000,#0a0a0a)}
-        .cta-final h2{font-size:clamp(22px,3.8vw,88px);margin-bottom:24px}
+        .cta-final{padding:90px 6%;text-align:center;background:linear-gradient(to top,#000,#0a0a0a)}
+        .cta-final h2{font-size:clamp(22px,3.8vw,88px);margin-bottom:20px}
         .cta-final .btn{padding:18px 36px;font-size:clamp(14px,2.4vw,36px)}
 
         /* whatsapp float */
@@ -108,22 +118,19 @@
         .whatsapp-float:hover{transform:scale(1.08)}
 
         /* footer */
-        footer{padding:40px 6%;text-align:center;background:#000;color:#bbb;font-size:14px}
+        footer{padding:30px 6%;text-align:center;background:#000;color:#bbb;font-size:14px}
 
-        /* small devices tweaks */
         @media (max-width:768px){
-            header{padding:10px 4%}
-            .logo-img{height:52px}
-            .hero{padding-top:100px;padding-bottom:40px;background-attachment:scroll}
-            .tests-grid{gap:14px}
+            header{padding:8px 4%}
+            .logo-img{height:48px}
+            .hero{padding-top:70px;padding-bottom:30px;background-attachment:scroll}
+            .tests-grid{gap:12px}
             .product-card img{height:200px}
             .luxury-cars img{height:120px}
             .whatsapp-float{left:12px;bottom:12px;width:56px;height:56px;font-size:24px}
-            /* Reduce heavy effects on small screens */
             .test-card, .product-card{backdrop-filter:none;box-shadow:none}
         }
 
-        /* Prevent possible horizontal overflow from long words or LTR content */
         .wrap, .product-info, .test-card, .story p, .hero p {word-wrap:break-word;hyphens:auto;overflow-wrap:break-word}
     </style>
 </head>
@@ -136,15 +143,60 @@
 
     <main>
         <section class="hero" aria-label="hero">
-            <div class="wrap">
-                <h1 data-en="UNBREAKABLE. UNSTOPPABLE. GSS.">غیرقابل نفوذ ⋅ غیرقابل شکست ⋅ غیرقابل توقف</h1>
-                <p data-en="The lock that professional thieves truly fear">تنها قفلی که سارق‌های حرفه‌ای واقعاً ازش می‌ترسن</p>
-                <div style="margin-top:18px">
-                    <button class="btn" id="seeProof" data-en="SEE THE PROOF">خودت ببین</button>
-                </div>
-            </div>
-        </section>
+    <div class="wrap">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+            <span class="hero-box">غیرقابل نفوذ</span>
+            <span class="hero-box">غیرقابل شکست</span>
+            <span class="hero-box">غیرقابل توقف</span>
+        </div>
+        <p data-en="The lock that professional thieves truly fear" style="margin-top:14px">تنها قفلی که سارق‌های حرفه‌ای واقعاً ازش می‌ترسن</p>
+        <div style="margin-top:14px">
+            <button class="btn" id="seeProof" data-en="SEE THE PROOF">خودت ببین</button>
+        </div>
+    </div>
+</section>
 
+<style>
+.hero-box{
+    display:inline-block;
+    padding:14px 32px;
+    border-radius:18px;
+    border:2px solid rgba(255,193,7,0.6);
+    background:linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+    color:var(--primary);
+    font-family:'Orbitron',sans-serif;
+    font-size:clamp(24px,5vw,60px);
+    text-shadow:
+        0 0 20px var(--primary-glow),
+        0 0 50px rgba(255,193,7,0.2),
+        0 0 80px rgba(255,193,7,0.1);
+    box-shadow:
+        0 0 12px rgba(255,193,7,0.6),
+        0 0 40px rgba(255,193,7,0.2),
+        inset 0 0 20px rgba(255,255,255,0.08);
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+.hero-box:hover{
+    transform:scale(1.05);
+    box-shadow:
+        0 0 20px var(--primary-glow),
+        0 0 60px rgba(255,193,7,0.3),
+        inset 0 0 25px rgba(255,255,255,0.1);
+}
+.hero{
+    min-height:calc(100vh - 72px);
+    display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:80px 6% 40px;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 0%, transparent 40%),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,0.05) 0%, transparent 50%),
+        linear-gradient(180deg, rgba(204,164,7,0.22) 0%, rgba(0,0,0,0.92) 60%),
+        url("HERO.JPEG") center/cover no-repeat;
+    background-blend-mode: overlay, overlay, normal, normal;
+}
+</style>
+
+
+        <!-- بقیه بخش‌ها بدون تغییر باقی می‌مانند -->
         <section id="tests" class="section" aria-label="tests">
             <h2 data-en="THIEVES TRIED. ALL FAILED.">سارق‌ها امتحان نمکنند. چون روشن بین هستند.</h2>
             <div class="tests-grid" role="list">
@@ -203,11 +255,11 @@
         <section class="story">
             <h2 data-en="THE GSS STORY">ارتباط با GSS</h2>
             <p>ایران - تهران - بازار بزرگ<br>
-            چراغ برق - روبروی مترو ملت - پلاک 101<br><br>
+            چراغ برق - روبروی مترو ملت - پلاک 101<br>
             فروشگاه GSS<br>
             'گروه تولیدی و صنعتی GSS همواره برای بهبود کیفیت '<br>
             و نوآوری همچنان در پی فعالیت هستن.<br><br>
-            GSS یعنی امنیت واقعی. نه شعار.
+           دارای شماره ثبت کالا و ثبت محصول و هر گونه کپی بردای پیگرد قانونی دارد.
             </p>
         </section>
 
@@ -222,48 +274,9 @@
     </a>
 
     <footer>
-        © 2025 GSS. All Rights Reserved.
+        © 2025 GSS. All Rights Reserved. Code  R.M
     </footer>
 
     <script>
-        // Language switch: swap text with data-en attribute (works both ways)
         (function(){
-            const switchBtn = document.getElementById('langSwitch');
-            switchBtn.addEventListener('click', function(){
-                // Determine current language by html lang
-                const html = document.documentElement;
-                const isFa = html.lang === 'fa' || html.lang === 'fa-IR';
-                // Swap lang & dir
-                html.lang = isFa ? 'en' : 'fa';
-                html.dir = isFa ? 'ltr' : 'rtl';
-                // swap texts
-                document.querySelectorAll('[data-en]').forEach(el=>{
-                    let en = el.getAttribute('data-en') || '';
-                    let current = el.innerText || '';
-                    // set innerText to en and store previous in data-en (swap)
-                    el.innerText = isFa ? en : current;
-                    el.setAttribute('data-en', isFa ? current : en);
-                });
-                switchBtn.innerText = isFa ? 'فارسی' : 'ENGLISH';
-            });
-
-            // smooth scroll for "see proof"
-            document.getElementById('seeProof').addEventListener('click', function(){
-                const target = document.getElementById('tests');
-                if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
-            });
-
-            // Accessibility: reduce motion if user prefers
-            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-            if(reduceMotion && reduceMotion.matches){
-                document.documentElement.style.setProperty('--reduce-motion', 'true');
-                // disable some heavy transitions
-                document.querySelectorAll('*').forEach(el=>{
-                    el.style.transitionDuration = '0s';
-                    el.style.animationDuration = '0s';
-                });
-            }
-        })();
-    </script>
-</body>
-</html>
+            const switchBtn = document.getElementById})
