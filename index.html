@@ -272,29 +272,61 @@
         </section>
     </main>
 
-    <a href="https://wa.me/+989123793037" class="whatsapp-float" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <!-- دکمه‌های شناور جدید – کاملاً مرتب تو موبایل و دسکتاپ -->
+<div class="social-buttons">
+    <a href="https://wa.me/+989123793037" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- دکمه‌های تلگرام و اینستاگرام -->
-<a href="https://t.me/gssshop" class="social-float telegram" target="_blank">
-    <i class="fab fa-telegram-plane"></i>
-</a>
-<a href=" https://www.instagram.com/g.s.s_lock?igsh=MW1hY3M2NWN4ZHB5eA%3D%3D&utm_source=qr" class="social-float instagram" target="_blank">
-    <i class="fab fa-instagram"></i>
-</a>
+    <a href="https://t.me/gssshop" target="_blank" aria-label="Telegram">
+        <i class="fab fa-telegram-plane"></i>
+    </a>
+    <a href="https://www.instagram.com/g.s.s_lock" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
 
 <style>
-    .social-float{position:fixed;left:20px;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;color:#fff;box-shadow:0 8px 25px rgba(0,0,0,0.4);z-index:998;transition:0.3s}
-    .social-float:hover{transform:scale(1.15)}
-    .telegram{background:#229ED9;bottom:170px}
-    .instagram{background:linear-gradient(45deg,#F56040,#C32AA3,#4C68D7);bottom:100px}
+    .social-buttons {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 18px;
+        z-index: 9999;
+        padding: 0 10px;
+    }
+    .social-buttons a {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: #fff;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+        transition: all 0.35s ease;
+    }
+    .social-buttons a:hover {
+        transform: translateY(-10px) scale(1.15);
+    }
+    .social-buttons a:nth-child(1) { background: #25D366; } /* واتساپ */
+    .social-buttons a:nth-child(2) { background: #229ED9; } /* تلگرام */
+    .social-buttons a:nth-child(3) { 
+        background: linear-gradient(45deg, #F56040, #C32AA3, #4f5bd5); 
+    } /* اینستا */
+
+    /* روی موبایل کوچیک‌تر و قشنگ‌تر */
+    @media (max-width: 768px) {
+        .social-buttons { 
+            bottom: 15px; 
+            gap: 15px; 
+        }
+        .social-buttons a { 
+            width: 54px; 
+            height: 54px; 
+            font-size: 28px; 
+        }
+    }
 </style>
-
-    <footer>
-        © 2025 GSS. All Rights Reserved. Code  R.M
-    </footer>
-
-    <script>
-        (function(){
-            const switchBtn = document.getElementById})
-            
