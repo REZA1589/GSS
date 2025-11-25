@@ -1,6 +1,67 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+    <!-- ==== سئو حرفه‌ای GSS – برای گوگل و همه موتورهای جستجو ==== -->
+<meta name="description" content="قفل فرمان، قفل پدال و قفل اتومات GSS – تنها قفل فولادی ایرانی با سیلندر سولکسی ضد اسید، غیرقابل برش، غیرقابل دریل و غیرقابل کپی. تولید تهران – بازار بزرگ">
+<meta name="keywords" content="قفل فرمان, قفل پدال, قفل اتوماتومات, قفل ضد اسید, سیلندر سولکسی, قفل GSS, قفل غیرقابل برش, قفل خودرو تهران, قفل فرمان اصل, قفل پدال اصل">
+<meta name="author" content="گروه تولیدی و صنعتی GSS">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="قفل GSS | غیرقابل نفوذ ⋅ غیرقابل شکست ⋅ غیرقابل توقف">
+<meta property="og:description" content="تنها قفل فولادی ایرانی با سیلندر سولکسی ضد اسید و ضد دریل – امنیت واقعی برای خودروی شما">
+<meta property="og:image" content="https://gss-lock.ir/HERO.JPEG">
+<meta property="og:url" content="https://gss-lock.ir">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFC107">
+<link rel="canonical" href="https://gss-lock.ir">
+
+<!-- Schema.org مارک‌آپ – گوگل اینو خیلی دوست داره (سازمان + محصول) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "گروه تولیدی و صنعتی GSS",
+  "url": "https://gss-lock.ir",
+  "logo": "https://gss-lock.ir/LOGO.JPG",
+  "description": "تولیدکننده قفل فرمان، قفل پدال و قفل اتومات فولادی با سیلندر سولکسی ضد اسید",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "بازار بزرگ، چراغ برق، روبروی مترو ملت، پلاک 101",
+    "addressLocality": "تهران",
+    "addressCountry": "IR"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+98-21-33119238",
+    "contactType": "customer service"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "قفل فرمان و پدال GSS",
+  "image": "https://gss-lock.ir/FARMAN1.jpg",
+  "description": "قفل فرمان و پدال فولادی سخت‌کاری‌شده با سیلندر سولکسی ضد اسید و ضد دریل",
+  "brand": {
+    "@type": "Brand",
+    "name": "GSS"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://gss-lock.ir",
+    "priceCurrency": "IRR",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "GSS"
+    }
+  }
+}
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GSS | غیرقابل نفوذ ⋅ غیرقابل شکست ⋅ غیرقابل توقف</title>
@@ -248,7 +309,7 @@
             <h2 data-en="TRUSTED BY LUXURY CAR OWNERS">ماشین‌های لوکس فقط GSS می‌خرند</h2>
             <div class="luxury-cars">
                 <img src="LAMB.jpg" alt="مرسدس با GSS">
-                <img src="BMW.JPG" alt="بی ام و با GSS">
+                <img src="BMW.jpg" alt="بی ام و با GSS">
                 <img src="PORSH.jpg" alt="پورشه با GSS">
                 <img src="BENZ.jpg" alt="لامبورگینی با GSS">
             </div>
@@ -274,6 +335,8 @@
     </main>
 
     <!-- دکمه‌های شناور جدید – کاملاً مرتب تو موبایل و دسکتاپ -->
+<!-- دکمه‌های شناور چپ-پایین – کاملاً مرتب، کهکشانی، طلایی، بدون حذف هیچ چیز -->
+<!-- دکمه‌های شناور چپ-پایین – تم کاملاً کهکشانی-ستاره‌ای-طلایی -->
 <div class="social-buttons">
     <a href="https://wa.me/+989123793037" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
@@ -289,46 +352,170 @@
 <style>
     .social-buttons {
         position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 20px;
+        bottom: 30px;
         display: flex;
-        gap: 18px;
+        flex-direction: column;
+        gap: 22px;
         z-index: 9999;
-        padding: 0 10px;
     }
+
     .social-buttons a {
-        width: 58px;
-        height: 58px;
+        position: relative;
+        width: 68px;
+        height: 68px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 30px;
+        font-size: 34px;
         color: #fff;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-        transition: all 0.35s ease;
+        overflow: hidden;
+        animation: floatStar 7s ease-in-out infinite;
     }
-    .social-buttons a:hover {
-        transform: translateY(-10px) scale(1.15);
-    }
-    .social-buttons a:nth-child(1) { background: #25D366; } /* واتساپ */
-    .social-buttons a:nth-child(2) { background: #229ED9; } /* تلگرام */
-    .social-buttons a:nth-child(3) { 
-        background: linear-gradient(45deg, #F56040, #C32AA3, #4f5bd5); 
-    } /* اینستا */
 
-    /* روی موبایل کوچیک‌تر و قشنگ‌تر */
+    /* ستاره‌های طلایی داخل دکمه‌ها */
+    .social-buttons a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255,193,7,0.9) 0%, transparent 60%);
+        opacity: 0;
+        animation: starPulse 4s infinite;
+    }
+
+    /* رنگ هر دکمه + هاله طلایی کهکشانی */
+    .social-buttons a:nth-child(1) { background: #25D366; box-shadow: 0 0 40px #25D366, 0 0 80px rgba(255,193,7,0.6); }
+    .social-buttons a:nth-child(2) { background: #229ED9; box-shadow: 0 0 40px #229ED9, 0 0 80px rgba(255,193,7,0.6); }
+    .social-buttons a:nth-child(3) { 
+        background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D);
+        box-shadow: 0 0 40px #E1306C, 0 0 80px rgba(255,193,7,0.6);
+    }
+
+    /* هاور = انفجار طلایی + ستاره‌ها */
+    .social-buttons a:hover {
+        transform: scale(1.35) translateY(-10px);
+        box-shadow: 0 0 120px rgba(255,193,7,1), 0 0 180px rgba(255,193,7,0.8);
+    }
+    .social-buttons a:hover::before {
+        opacity: 1;
+        animation: starBurst 1.5s ease-out;
+    }
+
+    /* انیمیشن شناور کهکشانی */
+    @keyframes floatStar {
+        0%,100% { transform: translateY(0) rotate(0deg); }
+        50%     { transform: translateY(-18px) rotate(4deg); }
+    }
+
+    /* پالس ستاره طلایی */
+    @keyframes starPulse {
+        0%,100% { opacity: 0; transform: scale(0.5); }
+        50%     { opacity: 0.6; transform: scale(1.2); }
+    }
+
+    /* انفجار طلایی موقع هاور */
+    @keyframes starBurst {
+        0%   { opacity: 0; transform: scale(0); }
+        50%  { opacity: 1; transform: scale(1.8); }
+        100% { opacity: 0; transform: scale(3); }
+    }
+
+    /* موبایل */
     @media (max-width: 768px) {
-        .social-buttons { 
-            bottom: 15px; 
-            gap: 15px; 
-        }
-        .social-buttons a { 
-            width: 54px; 
-            height: 54px; 
-            font-size: 28px; 
-        }
+        .social-buttons { left: 14px; bottom: 22px; gap: 18px; }
+        .social-buttons a { width: 58px; height: 58px; font-size: 30px; }
     }
 </style>
+<!-- فوتر طلایی-کهکشانی GSS -->
+<footer class="gss-footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="LOGO.JPG" alt="GSS Lock" class="footer-logo-img">
+            <p>غیرقابل نفوذ ⋅ غیرقابل شکست ⋅ غیرقابل توقف</p>
+        </div>
+        
+        <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> تهران – بازار بزرگ – چراغ برق – روبروی مترو ملت – پلاک 101</p>
+            <p><i class="fas fa-phone"></i> 021-33119238</p>
+            <p><i class="fab fa-whatsapp"></i> 0933-7946110</p>
+        </div>
 
+        <div class="footer-copyright">
+            <p>© ۱۴۰۴ گروه تولیدی و صنعتی GSS – تمامی حقوق محفوظ است</p>
+            <p class="made-with">dir site by R.M</p>
+        </div>
+    </div>
+
+    <!-- خط طلایی درخشان بالای فوتر -->
+    <div class="footer-glow-line"></div>
+</footer>
+
+<style>
+    .gss-footer {
+        background: linear-gradient(to top, #000, #0a0a0a);
+        color: #ccc;
+        padding: 70px 20px 40px;
+        text-align: center;
+        position: relative;
+        margin-top: 100px;
+        overflow: hidden;
+    }
+    .footer-glow-line {
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: var(--primary);
+        box-shadow: 0 0 40px var(--primary), 0 0 80px rgba(255,193,7,0.6);
+    }
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        align-items: center;
+    }
+    .footer-logo-img {
+        height: 80px;
+        filter: drop-shadow(0 0 30px var(--primary));
+        margin-bottom: 15px;
+    }
+    .footer-logo p {
+        color: var(--primary);
+        font-size: 20px;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+    .footer-contact p {
+        font-size: 18px;
+        margin: 12px 0;
+        direction: rtl;
+    }
+    .footer-contact i {
+        color: var(--primary);
+        margin-left: 10px;
+    }
+    .footer-copyright {
+        margin-top: 20px;
+        font-size: 15px;
+        opacity: 0.8;
+    }
+    .made-with {
+        color: var(--primary);
+        font-weight: 600;
+        margin-top: 8px;
+        animation: pulse 4s infinite;
+    }
+    @keyframes pulse {
+        0%,100% { opacity: 0.8; }
+        50% { opacity: 1; }
+    }
+    @media (max-width: 768px) {
+        .gss-footer { padding: 60px 15px 30px; }
+        .footer-content { gap: 30px; }
+        .footer-logo-img { height: 65px; }
+        .footer-contact p { font-size: 16px; }
+    }
+</style>
