@@ -1,41 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- صفحه اصلی -->
   <url>
     <loc>https://gsslock.ir/</loc>
-    <lastmod>2025-11-28</lastmod>        <!-- تاریخ امروز -->
-    <changefreq>daily</changefreq>       <!-- هر روز آپدیت می‌شه (گوگل عاشقشه) -->
+    <lastmod>2025-12-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    
-    <!-- همه عکس‌های مهم رو به گوگل معرفی می‌کنیم -->
+
+    <!-- تصاویر مهم سایتت رو اینجا اضافه کن (این بخش خیلی حرفه‌ای می‌کنه SEO رو) -->
+    <!-- مثال: اگر عکس اصلی قفل فرمان داری، آدرس مستقیمش رو بگذار -->
     <image:image>
-      <image:loc>https://gsslock.ir/HERO.JPEG</image:loc>
-      <image:title>قفل فرمان و پدال GSS – غیرقابل نفوذ</image:title>
-      <image:caption>تنها قفل فولادی ایرانی با سیلندر سولکسی ضد اسید</image:caption>
+      <image:loc>https://gsslock.ir/images/lock-command.jpg</image:loc>  <!-- آدرس واقعی عکس رو عوض کن -->
+      <image:title>قفل فرمان GSS - غیرقابل نفوذ</image:title>
+      <image:caption>قفل فرمان پیشرفته GSS برای امنیت خودرو</image:caption>
     </image:image>
-    
+
     <image:image>
-      <image:loc>https://gsslock.ir/FARMAN1.jpg</image:loc>
-      <image:title>قفل فرمان GSS ضد برش و ضد دریل</image:title>
+      <image:loc>https://gsslock.ir/images/lock-pedal.jpg</image:loc>  <!-- آدرس واقعی -->
+      <image:title>قفل پدال GSS</image:title>
+      <image:caption>قفل پدال اتومات و دستی GSS</image:caption>
     </image:image>
-    
-    <image:image>
-      <image:loc>https://gsslock.ir/PEDAL.jpg</image:loc>
-      <image:title>قفل پدال GSS با امنیت ۱۰۰٪</image:title>
-    </image:image>
-    
-    <image:image>
-      <image:loc>https://gsslock.ir/KEY.jpg</image:loc>
-      <image:title>سیلندر سولکسی ضد اسید و غیرقابل کپی</image:title>
-    </image:image>
-    
-    <image:image>
-      <image:loc>https://gsslock.ir/LOGO.JPG</image:loc>
-      <image:title>لوگو رسمی GSS Lock تهران</image:title>
-    </image:image>
+
+    <!-- اگر عکس‌های بیشتری داری، همینطوری <image:image> اضافه کن (تا ۱۰۰۰ تا مجاز هست) -->
+
   </url>
 
 </urlset>
