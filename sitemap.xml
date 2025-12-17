@@ -8,21 +8,28 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
 
-    <!-- تصاویر مهم سایتت رو اینجا اضافه کن (این بخش خیلی حرفه‌ای می‌کنه SEO رو) -->
-    <!-- مثال: اگر عکس اصلی قفل فرمان داری، آدرس مستقیمش رو بگذار -->
+    <!-- تصویر ۱: قفل فرمان (نام فایل واقعی رو جایگزین کن) -->
     <image:image>
-      <image:loc>https://gsslock.ir/images/lock-command.jpg</image:loc>  <!-- آدرس واقعی عکس رو عوض کن -->
+      <image:loc>https://gsslock.ir/lock-command.jpg</image:loc>  <!-- مثلاً lock-command.jpg یا 1.jpg یا gss1.png -->
       <image:title>قفل فرمان GSS - غیرقابل نفوذ</image:title>
-      <image:caption>قفل فرمان پیشرفته GSS برای امنیت خودرو</image:caption>
+      <image:caption>قفل فرمان پیشرفته GSS برای امنیت کامل خودرو در برابر سرقت</image:caption>
     </image:image>
 
+    <!-- تصویر ۲: قفل پدال -->
     <image:image>
-      <image:loc>https://gsslock.ir/images/lock-pedal.jpg</image:loc>  <!-- آدرس واقعی -->
+      <image:loc>https://gsslock.ir/lock-pedal.jpg</image:loc>  <!-- نام واقعی، مثلاً pedal-lock.jpg -->
       <image:title>قفل پدال GSS</image:title>
-      <image:caption>قفل پدال اتومات و دستی GSS</image:caption>
+      <image:caption>قفل پدال دستی و اتومات GSS با مقاومت بالا در برابر برش و دریل</image:caption>
     </image:image>
 
-    <!-- اگر عکس‌های بیشتری داری، همینطوری <image:image> اضافه کن (تا ۱۰۰۰ تا مجاز هست) -->
+    <!-- تصویر ۳: قفل پدال اتومات (جدید) -->
+    <image:image>
+      <image:loc>https://gsslock.ir/lock-pedal-auto.jpg</image:loc>  <!-- نام واقعی، مثلاً auto-pedal.jpg -->
+      <image:title>قفل پدال اتومات GSS (جدید)</image:title>
+      <image:caption>قفل پدال اتومات GSS - نصب سریع و امنیت حداکثری</image:caption>
+    </image:image>
+
+    <!-- اگر عکس‌های بیشتری داری (مثل لوگو یا عکس‌های دیگه)، همینطوری اضافه کن -->
 
   </url>
 
